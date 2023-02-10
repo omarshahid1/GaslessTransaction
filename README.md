@@ -33,13 +33,19 @@ Expected `.env` file in `/app`:
 - `REACT_APP_WEBHOOK_URL`: Webhook of the Autotask to invoke for relaying meta-txs.
 - `REACT_APP_QUICKNODE_URL`: Optional URL to Quicknode for connecting to the Goerli network from the dapp.
 
+
+
 ## Run the code
 
 To run the workshop code yourself you will need to [sign up to Defender](https://defender.openzeppelin.com/).
 
 ### Fork and clone the repo
 
-First fork the repository and then Git Clone your fork to your computer and install dependencies using yarn
+First fork the repository and then Git Clone your fork to your computer and install dependencies using
+
+```js
+$ yarn
+```
 
 
 ### Configure the project
@@ -72,12 +78,6 @@ Use the newly created Relayer to deploy the MinimalForwarder and Registry contra
 $ yarn deploy
 ```
 
-### Sign Using Relayer
-
-Sign a request to register a name, this will create a request in `tmp/request.json` that we can then view
-
-
-
 ### Create Autotask
 
 Create an [Autotask using Defender Client](https://docs.openzeppelin.com/defender/autotasks-api-reference), with a webhook trigger and connected to our Goerli relayer.
@@ -88,4 +88,6 @@ $ yarn create-autotask
 
 This creates the autotask, saves the Autotask ID to the .env file [AUTO_TASK_ID]), and uploads the autotask code.
 
-Grab the Autotask webhook from the web app and store in the apps `.env` file (in the `app` directory).
+Save the Autotask webhook to your .env as the WEBHOOK_URL and in the /app .env file as the REACT_APP_WEBHOOK_URL.
+
+Test the meta-transaction’s functionality with ```js $ yarn sign ``` followed by ```js $ yarn invoke ```.
