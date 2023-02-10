@@ -90,4 +90,4 @@ This creates the autotask, saves the Autotask ID to the .env file [AUTO_TASK_ID]
 
 Save the Autotask webhook to your .env as the WEBHOOK_URL and in the /app .env file as the REACT_APP_WEBHOOK_URL.
 
-Test the meta-transaction’s functionality with ```js $ yarn sign ``` followed by ```js $ yarn invoke ```.
+Test the meta-transaction’s functionality with ``` $ yarn sign ``` followed by ``` $ yarn invoke ```.
