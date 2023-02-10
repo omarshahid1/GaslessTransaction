@@ -71,10 +71,10 @@ This runs a script that creates a relayer and stores the relayer API key and API
 
 ### Deploy contracts
 
-Compile the contracts using ```npx hardhat compile```.
-Use the newly created Relayer to deploy the MinimalForwarder and SimpleNFT contracts on Goerli
+Compile the contracts. Then use the newly created Relayer to deploy the MinimalForwarder and SimpleNFT contracts on Goerli
 
 ```js
+npx hardhat compile
 yarn deploy
 ```
 
@@ -90,4 +90,10 @@ This creates the autotask, saves the Autotask ID to the .env file [AUTO_TASK_ID]
 
 Save the Autotask webhook to your .env as the WEBHOOK_URL and in the /app .env file as the REACT_APP_WEBHOOK_URL.
 
-Test the meta-transaction’s functionality with ```$ yarn sign``` followed by ```$ yarn invoke```.
+
+Test the meta-transaction’s functionality with 
+
+```js
+yarn sign
+yarn invoke
+```
